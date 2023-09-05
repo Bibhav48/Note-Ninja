@@ -37,6 +37,7 @@ if (window.location.pathname == "/"){
 const overlay = document.getElementById("overlay");
 const popup = document.getElementById("popup");
 const closeBtn = document.getElementById("close-btn");
+const body = document.querySelector("body");
 
 // Check if a session cookie is set to determine if the popup should be displayed
 const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
@@ -44,12 +45,14 @@ const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
 if (!hasSeenPopup) {
     overlay.style.display = "block";
     popup.style.display = "block";
+    body.classList.add("blur");
 }
 
 closeBtn.addEventListener("click", function () {
     overlay.style.display = "none";
     popup.style.display = "none";
+    body.classList.remove("blur");
 
     // Set a session cookie to remember that the popup has been seen
-    sessionStorage.setItem("hasSeenPopup", "true");
+    sessionStorage.setItem("hasSeenPopup", true);
 });

@@ -148,13 +148,13 @@ a.active:hover::after {
 #icons {
   background-color: #534d56;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: 50px;
   height: 40px;
   width: 40px;
-  border-radius: 30px;
+  border-radius: 50%;
   overflow: hidden;
-  margin: 30px 50px 15px 15px;
+  z-index: 1;
 }
 
 #icons>i {
@@ -262,13 +262,16 @@ i.fa-brands {
 .social-btns .btn:focus:before,
 .social-btns .btn:hover:before {
   transform: scale(1);
-
 }
 
 .social-btns .btn:focus .fa-brands,
 .social-btns .btn:hover .fa-brands {
   color: #fff;
   transform: scale(1);
+}
+
+.btn:hover {
+  box-shadow: 0 5px 15px -2px rgb(255, 255, 255);
 }
 
 .social-btns .btn {
@@ -292,6 +295,7 @@ i.fa-brands {
   position: absolute;
   /* transform: rotate(45deg); */
   transform: scale(0);
+  border-radius: 28%;
 }
 
 .social-btns .btn .fa-brands {
@@ -304,6 +308,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+}
+
+.blur > *:not(.popup) {
+  filter: blur(4px);
 }
 
 .overlay {
@@ -325,10 +333,12 @@ body {
   background-color: #949271;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 30px rgba(255, 255, 255,.6);
   max-width: 80%;
   max-height: 80%;
   overflow-y: auto;
+  z-index: 4;
+  display: none;
 }
 
 .close-btn {
