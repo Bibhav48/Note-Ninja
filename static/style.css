@@ -197,7 +197,7 @@ i.fa-brands {
   margin: auto;
   position: absolute;
   top: 85vh;
-  width: 40%;
+  width: max(40%,400px);
   left: 0;
   right: 0;
 }
