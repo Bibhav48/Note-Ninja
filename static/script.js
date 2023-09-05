@@ -42,10 +42,15 @@ const body = document.querySelector("body");
 // Check if a session cookie is set to determine if the popup should be displayed
 const hasSeenPopup = sessionStorage.getItem("hasSeenPopup");
 
+
+openPop = () => {
+        overlay.style.display = "block";
+        popup.style.display = "block";
+        body.classList.add("blur");
+}
+
 if (!hasSeenPopup) {
-    overlay.style.display = "block";
-    popup.style.display = "block";
-    body.classList.add("blur");
+    openPop();
 }
 
 closeBtn.addEventListener("click", function () {
