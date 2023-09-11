@@ -1,5 +1,5 @@
 {
-    "version": 2,
+    "devCommand": "gunicorn app:app",
     "builds": [
         {
             "src": "app.py",
@@ -11,5 +11,6 @@
             "src": "/(.*)",
             "dest": "/app.py"
         }
-    ]
+    ],
+    "installCommand": "pip install -r requirements.txt"
 }
