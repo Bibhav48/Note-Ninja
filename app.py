@@ -20,7 +20,7 @@ def notes():
         links = [f"{folder_path}/{file}" for file in file_names]
         files_phy=zip(files,links)
 
-    folder_path = "static/notes/chemistry"
+    folder_path = "static/documents/chemistry"
     if os.path.exists(folder_path):
         all_files = os.listdir(folder_path)
         file_names = [f for f in sorted(all_files)]
