@@ -12,7 +12,7 @@ def main():
 @app.route('/notes')
 def notes():
     files =[]
-    folder_path = "static/notes/physics"
+    folder_path = "static/documents/physics"
     if os.path.exists(folder_path):
         all_files = os.listdir(folder_path)
         file_names = [f for f in sorted(all_files)]
