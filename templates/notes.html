@@ -42,7 +42,7 @@
           <div class="list-unstyled">
             {% for (index,file),link in  files_chem%}
             <div class="custom-pdf-icon">
-              <a href ="{{ link }}" target="_blank">
+              <a href ="{{ url_for('static',filename='notes/physics/2 Motion.pdf') }}" target="_blank">
                 <i class="fa fa-file-pdf-o"></i>
                 <span class="pdf-text">Chapter {{ index }}: {{file}}</span></a>
             </div>
