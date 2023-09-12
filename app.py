@@ -16,7 +16,7 @@ def notes():
     if os.path.exists(folder_path):
         all_files = os.listdir(folder_path)
         file_names = [f for f in sorted(all_files)]
-        files = [(i," ".join(f.split(" ")[1::]).split(".")[0]) for i,f in enumerate(sorted(all_files),start=1)]
+        files = [(i,f.split(".")[0]) for i,f in enumerate(sorted(all_files),start=1)]
         links = [f"{folder_path}/{file}" for file in file_names]
         files_phy=zip(files,links)
 
@@ -24,7 +24,7 @@ def notes():
     if os.path.exists(folder_path):
         all_files = os.listdir(folder_path)
         file_names = [f for f in sorted(all_files)]
-        files = [(i," ".join(f.split(" ")[1::]).split(".")[0]) for i,f in enumerate(sorted(all_files),start=1)]
+        files = [(i,f.split(".")[0]) for i,f in enumerate(sorted(all_files),start=1)]
         links = [f"{folder_path}/{file}" for file in file_names]
     return render_template("notes.html", active="notes",files_phy=files_phy,files_chem=zip(files,links))
 
