@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     contentMain.style.height = totalHeight + 'px';
   }
 
-  // Example: Adding a new element dynamically
 var newElement = document.createElement('div');
 document.querySelector('.content-main')
 
