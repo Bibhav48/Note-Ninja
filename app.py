@@ -26,9 +26,8 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-# Initialize Flask-OAuthlib
+# initialize flask-OAuthlib
 oauth = OAuth(app)
-# Replace with your Google OAuth credentials
 google = oauth.remote_app(
     'google',
     consumer_key=os.getenv('GOOGLE_CLIENT_ID'),
